@@ -1,0 +1,77 @@
+@keyframes remove {
+    0% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    75% {
+        opacity: 0;
+        height: 100%;
+        line-height: 100%;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    100% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@keyframes add {
+    0% {
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        margin-bottom: 0px;
+    }
+
+    30% {
+        opacity: 0;
+        height: 100%;
+        line-height: 100%;
+        margin-bottom: 8px;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100%;
+        line-height: 100%;
+        margin-bottom: 8px;
+    }
+}
+
+.alert-animated
+{
+    animation-name: remove;
+    animation-duration: 2s;
+}
+
+.card-animated
+{
+    animation-name: add;
+    animation-duration: 2s;
+}
+
+#like-button
+{
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+}
+
+#like-button:focus
+{
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
