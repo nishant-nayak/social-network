@@ -78,9 +78,15 @@ function display_post(result) {
     let like_button = document.createElement('button')
     like_button.style.color = "red";
     like_button.id = "like-button"
+    like_button.onclick = like_post;
 
     let like_icon = document.createElement('i')
-    like_icon.className = "fa fa-heart-o"
+    if (result.result.is_liked) {
+        like_icon.className = "fa fa-heart"
+    }
+    else {
+        like_icon.className = "fa fa-heart-o"
+    }
 
     let card_likes = document.createElement('small')
     card_likes.className = "text-muted"
@@ -114,8 +120,8 @@ function display_post(result) {
 }
 
 function edit_post() {
-    const content = this.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
     let node = this.previousElementSibling
+    const content = node.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;  
     do {
         node = node.previousElementSibling;
     } while (node.id != "post-id")
